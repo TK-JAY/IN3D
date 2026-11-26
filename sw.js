@@ -1,6 +1,6 @@
-const scope=new URL(self.registration.scope);const prefix='jayit-studio-'+scope.pathname+'-';const cacheName=prefix+'2.0.0';
-const paths=['./','index.html','pro.js','upgrade.js','cloud-config.js','manifest.webmanifest','icon-192.png','icon-512.png'];
+const scope=new URL(self.registration.scope);const prefix='jayit-studio-'+scope.pathname+'-';const cacheName=prefix+'2.1.0';
+const paths=['./','index.html','pro.js','upgrade.js','cloud-config.js','earcut.js','precision.js','manifest.webmanifest','icon-192.png','icon-512.png'];
 const allowed=new Set(paths.map(p=>new URL(p,scope).href));
-self.addEventListener('install',e=>e.waitUntil(caches.open(cacheName).then(c=>c.addAll(paths.map(p=>new Request(new URL(p,scope),{cache:'reload'}))))));
+self.addEventListener('install',e=>e.waitUntil(caches.open(cacheName).then(c=>c.addAll(paths.map(p=>new Request(new URL(p,scope),{cache:'reload'})))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(prefix)&&k!==cacheName).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const r=e.request;if(r.method!=='GET'||!allowed.has(r.url)||r.headers.has('authorization'))return;e.respondWith((async()=>{const c=await caches.open(cacheName);try{const response=await fetch(r);if(response.ok&&response.type==='basic')await c.put(r,response.clone());return response;}catch(err){return await c.match(r)||Response.error()}})())});
