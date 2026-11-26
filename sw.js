@@ -1,5 +1,5 @@
-const scope=new URL(self.registration.scope);const prefix='jayit-studio-'+scope.pathname+'-';const cacheName=prefix+'2.3.0';
-const paths=['./','index.html','pro.js','upgrade.js','cloud-config.js','earcut.js','precision.js','split-studio.js','split-worker.js','technical.js','manifest.webmanifest','icon-192.png','icon-512.png'];
+const scope=new URL(self.registration.scope);const prefix='jayit-studio-'+scope.pathname+'-';const cacheName=prefix+'2.4.0';
+const paths=['./','index.html','pro.js','upgrade.js','cloud-config.js','earcut.js','precision.js','split-studio.js','split-worker.js','technical.js','gpu-studio.js','cpu-studio.js','ai-studio.js','glb-import.js','manifest.webmanifest','icon-192.png','icon-512.png'];
 const allowed=new Set(paths.map(p=>new URL(p,scope).href));
 self.addEventListener('install',e=>e.waitUntil(caches.open(cacheName).then(c=>c.addAll(paths.map(p=>new Request(new URL(p,scope),{cache:'reload'})))).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith(prefix)&&k!==cacheName).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
