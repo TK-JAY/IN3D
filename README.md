@@ -1,3 +1,7 @@
+# JayIT 3D Studio Pro 2.0
+
+Đọc [UPDATE_2.0.md](UPDATE_2.0.md) để cập nhật GitHub, cài PWA và cấu hình Supabase tùy chọn. Phần dưới mô tả nền tảng 1.0 được giữ lại.
+
 # JayIT 3D Studio Pro 1.0 — Local-first
 
 Bản nền tảng web tĩnh tiếng Việt, nâng cấp từ V0.1: 37 mục công cụ, bao gồm các bộ tạo mẫu thử, tiện ích lưới, quản lý sản xuất và kinh doanh. Không có phí API và không tải file lên máy chủ trong bản này.
