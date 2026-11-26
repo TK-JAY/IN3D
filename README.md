@@ -1,3 +1,19 @@
+# JayIT Studio 3.4 — AI Maker
+
+Đọc [UPDATE_3.4.md](UPDATE_3.4.md) trước khi chạy hoặc triển khai. Đây là gói tích lũy nghiệm thu một phần 0 + A, không phải bản hoàn thành B–E.
+
+# JayIT Studio 3.3 — Easy Maker
+
+Đọc [UPDATE_3.3.md](UPDATE_3.3.md) để cập nhật và xem báo cáo nghiệm thu Module A + C. Vào `easy.html` để tạo nhanh; `index.html` giữ Studio chuyên gia 3.2.
+
+# JayIT Studio 3.2 — Mesh Core (Module A, bản kiểm thử)
+
+Xem [UPDATE_3.2.md](UPDATE_3.2.md) để cài đặt, đọc phạm vi nâng cấp, chạy test và các giới hạn chưa nghiệm thu. Báo cáo thực thi ở `tests/*.log`. Nội dung phiên bản trước được giữ bên dưới.
+
+# JayIT Studio 3.1 — Workshop / Model Hub
+
+Xem [UPDATE_3.1.md](UPDATE_3.1.md) trước khi cập nhật. Tách/cắt lưới lớn, Model Hub 10 mẫu CAD và ghi chú PETG.
+
 # JayIT 3D Studio Pro 2.1 — Precision / PETG
 
 Xem [UPDATE_2.1.md](UPDATE_2.1.md) để cập nhật 4 file và đọc giới hạn.
