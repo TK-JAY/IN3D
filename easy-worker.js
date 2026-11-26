@@ -1,0 +1,2 @@
+self.window=self;importScripts('earcut.js','easy-geometry.js','easy-cad.js','easy-core.js');
+self.onmessage=async ({data:d})=>{try{let r=JayEasy.validate(JayEasy.build(d.state,d.textGroups));let view=JayEasy.indexed(r.mesh),stl=JayEasy.stl(r.mesh),mf=await JayEasy.mf(r).arrayBuffer();postMessage({id:d.id,ok:true,stat:r.stat,view,stl,mf},[view.part.v.buffer,view.part.f.buffer,view.part.c.buffer,stl,mf])}catch(e){postMessage({id:d.id,ok:false,error:e.message})}};
