@@ -1,3 +1,7 @@
+# JayIT 3D Studio Pro 2.1 — Precision / PETG
+
+Xem [UPDATE_2.1.md](UPDATE_2.1.md) để cập nhật 4 file và đọc giới hạn.
+
 # JayIT 3D Studio Pro 2.0
 
 Đọc [UPDATE_2.0.md](UPDATE_2.0.md) để cập nhật GitHub, cài PWA và cấu hình Supabase tùy chọn. Phần dưới mô tả nền tảng 1.0 được giữ lại.
